@@ -1,5 +1,4 @@
 class Replicator
-
   attr_reader :plate
 
   def initialize(enterprise)
@@ -33,7 +32,6 @@ class Replicator
 
   def transport_ingredients_to_glass
     return unless glass_in_tummy
-
     @recipe.ingredients.each do |ingredient_name|
       @enterprise.transporter.energize(obj: @enterprise.pantry.find_ingredient(ingredient_name), from: @enterprise.pantry.shelf, to: glass_in_tummy.inside)
     end
