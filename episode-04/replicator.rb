@@ -29,7 +29,6 @@ class Replicator
   def glass_in_tummy
     @tummy.contents.first
   end
-
   def transport_ingredients_to_glass
     return unless glass_in_tummy
 
@@ -54,7 +53,7 @@ class Replicator
     maximum_adjustments_allowed = 100
     number_of_adjustments = 0
 
-    # binding.pry
+
     while glass_in_reactor_core.temperature != desired_temperature &&
           number_of_adjustments < maximum_adjustments_allowed
 
